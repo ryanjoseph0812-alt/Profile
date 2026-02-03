@@ -7,33 +7,30 @@
 
     <!-- ===== Internal CSS Styling ===== -->
     <style>
-        /* ===== Smooth Blue-Red-Light Gradient Background ===== */
+        /* ===== Base Page Styling ===== */
         body {
             margin: 0;
             padding: 0;
             font-family: Arial, Helvetica, sans-serif;
-            /* Gradient: Blue -> Soft Light -> Red */
-            background: linear-gradient(135deg, #0a66c2, #f3f6f8, #c20a0a);
-            min-height: 100vh;
+            background-color: #f3f6f8; /* Light background for readability */
             color: #333;
         }
 
-        /* Main container */
         .container {
             max-width: 900px;
             margin: auto;
-            padding: 30px 20px;
+            padding: 20px;
         }
 
-        /* ===== Top Profile Section ===== */
+        /* ===== Profile Header ===== */
         .profile-header {
             background-color: #ffffff;
             display: flex;
             align-items: center;
             gap: 25px;
             padding: 30px;
-            border-radius: 14px;
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             margin-bottom: 30px;
         }
 
@@ -62,19 +59,13 @@
             background-color: #ffffff;
             padding: 25px;
             margin-bottom: 25px;
-            border-radius: 14px;
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             border-left: 6px solid #0a66c2;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         section:nth-of-type(even) {
             border-left-color: #c20a0a;
-        }
-
-        section:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
         }
 
         section h2 {
@@ -102,14 +93,14 @@
             line-height: 1.5;
         }
 
-        /* ===== Achievements Highlight ===== */
+        /* Achievements highlight */
         .achievements li::before {
             content: "★ ";
             color: #0a66c2;
             font-weight: bold;
         }
 
-        /* ===== Skills as Tags ===== */
+        /* Skills as tags */
         .skills-list {
             list-style: none;
             padding-left: 0;
@@ -123,30 +114,21 @@
             margin: 6px;
             border-radius: 20px;
             font-size: 14px;
-            transition: background-color 0.2s ease, transform 0.2s ease;
         }
 
-        .skills-list li:hover {
-            background-color: #d0e4ff;
-            transform: scale(1.05);
-        }
-
-        /* ===== Footer ===== */
+        /* Footer */
         footer {
             text-align: center;
             padding: 20px;
             font-size: 14px;
-            color: #ffffff;
+            color: #777;
         }
 
         footer hr {
             margin-bottom: 10px;
-            border: none;
-            height: 1px;
-            background-color: rgba(255, 255, 255, 0.4);
         }
 
-        /* ===== Responsive Design ===== */
+        /* Responsive */
         @media (max-width: 600px) {
             .profile-header {
                 flex-direction: column;
@@ -185,8 +167,8 @@
         <section>
             <h2>About Me</h2>
             <p>
-                Hello! My name is Ryan Joseph. I am a student who enjoys taking part in
-                school activities, hosting major events, and working with others.
+             I am a student at GEMS New Millennium School, Dubai. My personal experiences include taking part in
+             school activities, hosting major events, and working with others. I'm passionate fan of Liverpool Football Club. 
             </p>
         </section>
 
@@ -198,6 +180,23 @@
                 <li>Grade 5 Trinity Certification in Drama and Theatre</li>
                 <li>Silver medal winner in a 400m relay race</li>
                 <li>Host of multiple events including Round Square Conferences and Panthera Firma</li>
+                <li>Runner up Best Delegate in NMSMUN</li>
+                <li>Science Olympiad  Distinction Awardee</li>
+                <li>Inter School Quiz Competition Winner</li>
+            </ul>
+        </section>
+
+        <!-- ===== Experiences (New Section) ===== -->
+        <section>
+            <h2>Experiences</h2>
+            <ul>
+                <li>Participant - Farida Abraham Memorial Debautr and Quiz,Lucknow</li>
+                <li>Event Host – Round Square Conference (2025)</li>
+                <li>Team Leader - President of Quizzards Club (2025-2026)</li>
+                <li>Music Enthuiast– Trinity Dums Grade 5 Aspirant (2024–2026)</li>
+                <li>Athletic Achievment – Inter-school Sports Competitions (2026)</li>
+                <li>Peer Mentor – Leadership and Collaboration Programs (2022-2026)</li>
+                
             </ul>
         </section>
 
@@ -205,7 +204,7 @@
         <section>
             <h2>Skills</h2>
             <ul class="skills-list">
-                <li>Public Speaking</li>
+                <li>Networking</li>
                 <li>Event Hosting and Management</li>
                 <li>Teamwork and Collaboration</li>
                 <li>Leadership</li>
