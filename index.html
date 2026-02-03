@@ -12,26 +12,41 @@
             margin: 0;
             padding: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background-color: #f3f6f8; /* Light background for readability */
             color: #333;
+            /* Animated gradient background */
+            background: linear-gradient(270deg, #0a66c2, #c20a0a);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
         }
 
         .container {
             max-width: 900px;
             margin: auto;
             padding: 20px;
+            /* Add slight backdrop blur for readability */
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
         }
 
         /* ===== Profile Header ===== */
         .profile-header {
-            background-color: #ffffff;
             display: flex;
             align-items: center;
             gap: 25px;
             padding: 30px;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             margin-bottom: 30px;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeInUp 1s forwards;
         }
 
         .profile-header img {
@@ -56,12 +71,16 @@
 
         /* ===== Card Sections ===== */
         section {
-            background-color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.9);
             padding: 25px;
             margin-bottom: 25px;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             border-left: 6px solid #0a66c2;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+            animation-delay: 0.3s;
         }
 
         section:nth-of-type(even) {
@@ -127,6 +146,21 @@
         footer hr {
             margin-bottom: 10px;
         }
+
+        /* ===== Animations ===== */
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Staggered animation delays for sections */
+        section:nth-of-type(1) { animation-delay: 0.3s; }
+        section:nth-of-type(2) { animation-delay: 0.5s; }
+        section:nth-of-type(3) { animation-delay: 0.7s; }
+        section:nth-of-type(4) { animation-delay: 0.9s; }
+        section:nth-of-type(5) { animation-delay: 1.1s; }
 
         /* Responsive */
         @media (max-width: 600px) {
@@ -232,3 +266,4 @@
 
 </body>
 </html>
+
