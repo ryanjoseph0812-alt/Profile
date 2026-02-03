@@ -3,57 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <title>Ryan Joseph | Student Profile</title>
+
+    <!-- ===== Internal CSS Styling ===== -->
+    <!-- Clean, modern, and student-friendly CSS with comments -->
+    <style>
+        /* ===== Base Page Styling ===== */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f3f6f8; /* Light professional background */
+            color: #333;
+        }
+
+        /* Center all main content */
+        body > * {
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ===== Header Styling ===== */
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #0a66c2, #c20a0a); /* Blue to red gradient */
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 18px;
+            opacity: 0.95;
+        }
+
+        /* ===== Card-Style Sections ===== */
+        section {
+            background-color: #ffffff;
+            padding: 25px;
+            margin: 25px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            border-left: 6px solid #0a66c2;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        /* Alternate red and blue accents */
+        section:nth-of-type(even) {
+            border-left-color: #c20a0a;
+        }
+
+        /* Hover effect for cards */
+        section:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+        }
+
+        /* ===== Section Titles ===== */
+        section h2 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #0a66c2;
+            font-size: 24px;
+        }
+
+        section:nth-of-type(even) h2 {
+            color: #c20a0a;
+        }
+
+        /* ===== Lists ===== */
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        /* ===== Highlight Achievements ===== */
+        /* Adds subtle emphasis to achievement list items */
+        section:nth-of-type(2) li {
+            padding-left: 5px;
+            position: relative;
+        }
+
+        section:nth-of-type(2) li::before {
+            content: "★ ";
+            color: #0a66c2;
+            font-weight: bold;
+        }
+
+        /* ===== Skills as Tags ===== */
+        /* Remove default list style for skills */
+        section:nth-of-type(3) ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        /* Skill tag styling */
+        section:nth-of-type(3) li {
+            display: inline-block;
+            background-color: #e7f0fa;
+            color: #0a66c2;
+            padding: 8px 14px;
+            margin: 6px;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        /* Hover effect for skill tags */
+        section:nth-of-type(3) li:hover {
+            background-color: #d0e4ff;
+            transform: scale(1.05);
+        }
+
+        /* ===== Footer ===== */
+        footer {
+            text-align: center;
+            padding: 25px 15px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        footer hr {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
 
     <!-- ===== Header Section ===== -->
-    <!-- This section contains the student's name and a short headline -->
     <header>
         <h1>Ryan Joseph</h1>
         <p>Student | Event Host | Aspiring Leader</p>
-        <hr>
     </header>
 
     <!-- ===== About Me Section ===== -->
-    <!-- This section gives a short introduction about the student -->
     <section>
         <h2>About Me</h2>
         <p>
             Hello! My name is Ryan Joseph. I am a student who enjoys taking part in
             school activities, hosting major events, and working with others.
-            In my free time, I enjoy socialiseing with new people, and speaking to my friends.
         </p>
     </section>
 
     <!-- ===== Achievements Section ===== -->
-    <!-- This section lists notable achievements using an unordered list -->
     <section>
         <h2>Achievements</h2>
         <ul>
             <li>DofE Bronze Award recipient</li>
-            <li>Grade 5 Trinity Certification With Merit in Drama and Theatre</li>
-            <li>400m Relay Race Silver Medalist</li>
-            <li>Host ofRound Square Conferences and Panthera Firma</li>
+            <li>Grade 5 Trinity Certification in Drama and Theatre</li>
+            <li>Silver medal winner in a 400m relay race</li>
+            <li>Host of multiple events including Round Square Conferences and Panthera Firma</li>
         </ul>
     </section>
 
     <!-- ===== Skills Section ===== -->
-    <!-- This section highlights skills related to academics and activities -->
     <section>
         <h2>Skills</h2>
         <ul>
-            <li>Football Enthusiast</li>
+            <li>Public Speaking</li>
             <li>Event Hosting and Management</li>
-            <li>Socialisation</li>
+            <li>Teamwork and Collaboration</li>
             <li>Leadership</li>
             <li>Communication Skills</li>
         </ul>
     </section>
+
+    <!-- ===== Hobbies Section ===== -->
     <section>
-        <h2> Hobbies </h2>
+        <h2>Hobbies</h2>
+        <ul>
+            <li>Playing Football ⚽</li>
+            <li>Gaming 🎮</li>
+            <li>Hosting Major School Events 🎤</li>
+        </ul>
     </section>
-    <!-- ===== Footer Section ===== -->
-    <!-- Simple footer for page completion -->
+
+    <!-- ===== Footer ===== -->
     <footer>
         <hr>
         <p>&copy; 2026 Ryan Joseph</p>
@@ -61,6 +195,3 @@
 
 </body>
 </html>
-
-       
-            
